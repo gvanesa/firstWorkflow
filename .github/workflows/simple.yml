@@ -15,7 +15,9 @@ jobs:
                 ls /etc >> archivito.txt
                 tail archivito.txt
         - name: leer directorio
-          run: pwd
+          run: |
+                pwd 
+                ls
         - name: multinline script
           run: |
               node -v
