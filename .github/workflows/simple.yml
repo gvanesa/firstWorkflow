@@ -8,8 +8,12 @@ jobs:
       steps:
         - name: echo a string
           run: echo "hello world"
-        - name: consola
-          run: ls /etc
+        - name: crear directorio
+          run: |
+                mkdir pepe
+                cd pepe
+                ls /etc >> archivito.txt
+                tail archivito.txt
         - name: multinline script
           run: |
               node -v
